@@ -1,11 +1,15 @@
 /* http://www.colourlovers.com/palette/845780/No_idea */
 
-html {
+body {
   /* http://www.hicksdesign.co.uk/journal/forcing-scrollbars-now-even-better */
-  height: 100%; 
-  margin-bottom: 1px;
-  background-color: #FEFEEB; 
-  margin: 0 auto 0 44px; 
+  width: 950px;
+  height: 100%;
+  background-color: #fff; 
+  background-image: url('../images/background.png');
+  background-repeat: repeat-x;
+  color: #333; 
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .site {
@@ -15,7 +19,15 @@ html {
 .title {
   position: relative;
   padding: 18px 0 0 0;
-  background-color: #FEFEEB; 
+  background-color: #fff;
+  border: 1px solid #aaa; 
+}
+
+.site_title {
+  margin: 0px;
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .title a {
@@ -31,8 +43,9 @@ html {
 
 #home, #post {
   padding-top: 22px;
-  border: solid #888;
-  border-width: 1px 0 1px 1px;
+  padding-left: 20px;
+  border: 1px solid #aaa;
+  background-color: #fff;
 }
 
 #home h1 {
@@ -49,11 +62,19 @@ html {
 }
 
 #post h2, #post h3, #home h1 {
-  color: #489690;
+  color: #111;
+  font-weight: bold;
 }
 
 #home ul li {
   list-style: none;
+}
+
+.posts a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFA500;
+  font-size: 20px;
 }
 
 a[href^="http:"], a[href^="mailto:"], a[href^="http:"]:visited, 
@@ -66,14 +87,14 @@ blockquote {
   font-size: 90%;
   font-family: "DejaVu Sans", sans-serif;
   font-style: normal;
-  width: 253px;
+  width: 255px;
   margin-top: 6px;
-  margin-left: 572px;
+  margin-left: 565px;
   padding: 18px 22px 0 22px;
   position: absolute;
-  background: #F2F1D6;
+  background: #ddd;
   -moz-border-radius: 4px;  
-  color: #800;
+  color: #200;
 }
 
 blockquote img {
@@ -84,7 +105,7 @@ blockquote img {
 blockquote p.author {
   margin-top: -1em;
   padding-right: 44px;
-  color: #800;
+  color: #200;
   font-style: italic;
   text-align: right;
 }

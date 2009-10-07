@@ -5,21 +5,21 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Włodek Bzyl</title>
- <link href="http://inf.ug.edu.pl/~wbzyl/atom.xml" rel="self"/>
- <link href="http://inf.ug.edu.pl/~wbzyl/"/>
+ <link href="http://sigma.ug.edu.pl/~bdrzazgo/rails/atom.xml" rel="self"/>
+ <link href="http://sigma.ug.edu.pl/~bdrzazgo/rails"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://inf.ug.edu.pl/~wbzyl/</id>
  <author>
-   <name>Włodek Bzyl</name>
-   <email>matwb@univ.gda.pl</email>
+   <name>Drzazga</name>
+   <email>bartek4674@gmail.com</email>
  </author>
 
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://inf.ug.edu.pl/~wbzyl/{{ post.url }}"/>
+   <link href="http://sigma.ug.edu.pl/~bdrzazgo/rails/{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://inf.ug.edu.pl/~wbzyl/{{ post.id }}</id>
+   <id>http://sigma.ug.edu.pl/~bdrzazgo/rails/{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
