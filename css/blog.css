@@ -2,14 +2,12 @@
 
 body {
   /* http://www.hicksdesign.co.uk/journal/forcing-scrollbars-now-even-better */
-  width: 950px;
   height: 100%;
   background-color: #fff; 
   background-image: url('../images/background.png');
   background-repeat: repeat-x;
   color: #333; 
-  margin: 0 auto;
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .site {
@@ -60,8 +58,8 @@ body {
 
 #home, #post {
   padding-top: 22px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 22px;
+  padding-right: 22px;
   border: 1px solid #aaa;
   background-color: #fff;
 }
@@ -82,6 +80,10 @@ body {
 #post h2, #post h3, #home h1 {
   color: #111;
   font-weight: bold;
+}
+
+#post h1 {
+  color: #1E90FF;
 }
 
 #home ul li {
@@ -161,8 +163,6 @@ pre code {
 
 pre {
   border-left: 9px solid #FD9945;
-  margin-left: -49px;
-  padding: 0 0 0 49px;
 }
 
 /* tabele */
