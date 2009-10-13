@@ -12,8 +12,8 @@ dając możliwość skupienia sie na treści merytorycznej strony. Plusem może 
 na Github'ie.
 
 ####Kolumny
-Ideą Blueprinta jest podzielenie strony na kolumny, możemy mieć do 24 takich kolumn, gdzie każda z nich ma szerokość 30px.
-Oddzielone są od siebie 10px marginesem. Aby obsługi tego korzystamy z klasy 'span-...', gdzie w miejsce wielokropka wstawiany na jak 
+Ideą Blueprinta jest podzielenie strony na siatkę, która z kolei może mieć do 24 kolumn, gdzie każda z nich ma szerokość 30px.
+Oddzielone są od siebie 10px marginesem. Do obsługi tego korzystamy z klasy 'span-...', gdzie w miejsce wielokropka wstawiany na jak 
 wiele kolumn bedzie szeroki nasz div. Span-1 oznacza kolumne szerokości 30px, zaś span-2 to już 70px(2 kolumny + margines 10px).<br />
 Powiedzmy, że chcemy stworzyć szablon z 2 kolumnami o szerokości 150px oraz 710px, przykładowy kod może wyglądać następująco:
 {% highlight html  %}
@@ -62,4 +62,4 @@ Dodatkowym atutem jest kopatybilność z wszystkimi najpopularniejszymi obecnie 
 
 ## Linki
   <a href="http://www.blueprintcss.org/">Strona domowa projektu</a><br />
-  <a href="http://http://github.com/joshuaclayton/blueprint-css">Blueprint na Github'ie</a>
+  <a href="http://github.com/joshuaclayton/blueprint-css">Blueprint na Github'ie</a>
