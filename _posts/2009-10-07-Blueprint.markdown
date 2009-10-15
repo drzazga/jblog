@@ -60,6 +60,31 @@ Jak wygląda to w akcji można zobaczyć <a href="http://www.blueprintcss.org/te
 Myślę, że Blueprint jest tego typu frameworkiem, który zapewnia, że czas poświecony na jego naukę może bardzo szybko się zwrócić. 
 Dodatkowym atutem jest kopatybilność z wszystkimi najpopularniejszymi obecnie przeglądarkami(<a href="http://wiki.github.com/joshuaclayton/blueprint-css/browser-compatibility-list">żródło</a>).
 
-## Linki
+### Unused selectors
+Po uruchomieniu wtyczki wyszukującego nieużywane elemnty CSS'a oczom mym ukazał się taki oto widok:
+
+<img src="../../../../images/ucss.png" alt="unusedcss" />
+
+
+###Walidacja strony
+Przeprowadziłem walidacje strony pod kątem kodu html. Test pomyślnie zakończony ;)<br />
+CSS także został zwalidowany, nie obylo sie bez paru warningow, ale test został zakończony pomyślnie.
+
+<p style="float: left; margin-right: 10px">
+ <a href="http://validator.w3.org/check?uri=referer"><img
+        src="http://www.w3.org/Icons/valid-xhtml10-blue"
+        alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+</p>
+<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+</a>
+</p>
+     
+  
+
+### Linki
   <a href="http://www.blueprintcss.org/">Strona domowa projektu</a><br />
   <a href="http://github.com/joshuaclayton/blueprint-css">Blueprint na Github'ie</a>

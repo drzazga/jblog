@@ -1,0 +1,42 @@
+---
+layout: post
+title: Hirb
+---
+
+# {{ page.title }}
+
+Przeglądając ostatnio <a href="http://railscasts.com/">screencasty o Railsach</a> natknąłem się na bardzo ciekawy gem. 
+Chodzi o Hirb, który służy do zwiększenia przejrzystości tego co generuje konsola Ruby'ego. <br />
+Przejdę od razu do przykładu, najpierw wyswietlam pare ostatnich komentarzy z aplikacji, nad którą obecnie pracuję bez pomocy Hirb'a:<br />
+<img src="../../../../images/withouthirb.png">
+A teraz to samo z Hirb'em:<br />
+<img src="../../../../images/withhirb.png"><br />
+Jak widać różnica jest ogromna. <br />
+###Instalacja
+Aby zainstalować gema trzeba z konsoli wydać polecenie:
+{% highlight bash %}
+sudo gem install cldwalker-hirb --source http://gems.github.com
+{% endhighlight%}
+
+Jeśli chcemy żeby był on dostępny za każdym razem jak włączymy irb'a musimy dodać w katalogu domowym plik .irbrc, a w nim:
+{% highlight ruby %}
+if ENV['RAILS_ENV']
+	module CallHirbWhenReady
+		def inherited(subclass)
+			super
+			if !@hirb_required && subclass.name == "ActiveRecord::Base"
+				begin
+				require 'hirb'
+				Hirb::View.enable
+				ensure
+					@hirb_required = true
+				end
+			end
+		end
+	end
+	Object.send :extend, CallHirbWhenReady
+end
+{% endhighlight %}
+
+###Linki
+<a href="http://github.com/cldwalker/hirb">Hirb na Githubie</a>
