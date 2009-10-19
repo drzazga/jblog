@@ -82,8 +82,9 @@ CSS także został zwalidowany, nie obylo sie bez paru warningow, ale test zosta
         alt="Valid CSS!" />
 </a>
 </p>
-     
-  
+
+###YSlow  
+W tescie YSlow blog otrzymał note: C. W wiekszości kategorii było dobrze, czyli A. Niespodobało mu się m.in. to, że css nie są spakowane gzipem i nie ma Expires headers. Z tego co wyczytałem to te opcje ustawia sie w apache'u, więc ogólnie nie jest źle ;)
 
 ### Linki
   <a href="http://www.blueprintcss.org/">Strona domowa projektu</a><br />
