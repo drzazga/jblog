@@ -57,6 +57,7 @@ body {
 }
 
 #home, #post {
+	width: 600px;
   padding-top: 22px;
   padding-left: 22px;
   padding-right: 22px;
@@ -106,12 +107,6 @@ body {
   font-weight: bold;
   color: #FFA500;
   font-size: 15px;
-}
-
-a[href^="http:"], a[href^="mailto:"], a[href^="http:"]:visited, 
-a[href$=".pdf"], a[href$=".doc"], a[href$=".xls"], a[href$=".rss"], 
-a[href$=".rdf"], a[href^="aim:"] {
-  padding:2px 16px 2px 0;
 }
 
 blockquote {
@@ -164,12 +159,3 @@ pre {
   border-left: 9px solid #FD9945;
 }
 
-/* tabele */
-
-caption {
-  text-align: right;
-}
-
-li ul {
-  margin-bottom: 1.5em;
-}
