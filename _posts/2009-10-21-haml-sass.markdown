@@ -5,4 +5,6 @@ title: haml-sass
 
 # {{ page.title }}
 
-html2haml
+Moją przygodę z haml zacząłem od próby zmiany pliku index.html z głównego folderu bloga.
+Użyłem polecnia html2haml, niby wszystko pięknie ale po odpaleniu strony zobaczyłem na głownej stronie
+znaczniki haml'owe. Coś było nie tak.

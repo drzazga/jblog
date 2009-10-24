@@ -52,9 +52,8 @@ Blueprint umożliwia także przyjemniejszą prace z formularzami. Udostępnia kl
 które są bardzo przyjemne dla oka.
 Funkcjonalności te znajdziemy w pliku <a href="http://github.com/joshuaclayton/blueprint-css/blob/master/blueprint/src/forms.css">form.css</a>
 
-####Styl tekstu
-Standardowo w Blueprint wysokość linii określona jest jest na 18px, co oznacza, że wysokość każdego elementu musi być podzielna przez 18.
-Jak wygląda to w akcji można zobaczyć <a href="http://www.blueprintcss.org/tests/parts/elements.html">tutaj</a>
+####Przykładowa strona
+<a href="http://sigma.ug.edu.pl/~bdrzazgo/blueprint/">Tutaj</a> można znaleźć moją przykładową stronę wykorzystującą Blueprinta. 
 
 ####Podsumowanie
 Myślę, że Blueprint jest tego typu frameworkiem, który zapewnia, że czas poświecony na jego naukę może bardzo szybko się zwrócić. 
