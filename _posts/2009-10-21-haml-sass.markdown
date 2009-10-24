@@ -7,4 +7,6 @@ title: haml-sass
 
 Moją przygodę z haml zacząłem od próby zmiany pliku index.html z głównego folderu bloga.
 Użyłem polecnia html2haml, niby wszystko pięknie ale po odpaleniu strony zobaczyłem na głownej stronie
-znaczniki haml'owe. Coś było nie tak.
+znaczniki haml'owe. Zabawa z sass'em na blogu skończyła się podobnie. Wygenerowało plik sass, ale po
+podaniu ścieżki, blog nie wyglądał zbyt dobrze. Coś było nie tak. 
+

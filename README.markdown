@@ -47,24 +47,10 @@ Po wykonaniu polecenia blog jest dostępny pod URI:
 W *jBlogu* jest kilka napisów, które należy wymienić na swoje,
 na przykład, w pliku *index.html* znajdziemy:
 
-    title: WB_Blog
+    title: Drzazga Blog
 
 w plikach *_layouts/default.html* i :*_layouts/index.html*
 
-    <meta name="author" content="Włodek Bzyl" />.
+    <meta name="author" content="Drzazga" />.
     ...
  
-w pliku *atom.xml*:
-
-    <title>Włodek Bzyl</title>
-    <link href="http://inf.ug.edu.pl/~wbzyl/atom.xml" rel="self"/>
-    ...
-
-Logo przygotowałem w programie *inkscape*. 
-Plik *images/logo.svg* w formacie *SVG* zawiera 
-nazwę mojego bloga *WB@jBlog*.
-W pliku *SVG* literki składane są fontem *OTF*
-[Cyklop](http://nowacki.strefa.pl/cyklop.html). Komputerową
-wersję tego fontu przygotował Janusz M. Nowacki.
-    
-Oczywiście można też samemu przygotowac logo.
