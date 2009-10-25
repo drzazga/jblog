@@ -60,9 +60,13 @@ Myślę, że Blueprint jest tego typu frameworkiem, który zapewnia, że czas po
 Dodatkowym atutem jest kopatybilność z wszystkimi najpopularniejszymi obecnie przeglądarkami(<a href="http://wiki.github.com/joshuaclayton/blueprint-css/browser-compatibility-list">żródło</a>).
 
 ### Unused selectors
-Po uruchomieniu wtyczki wyszukującego nieużywane elemnty CSS'a oczom mym ukazał się taki oto widok:
+Po uruchomieniu wtyczki wyszukującej nieużywane elementy CSS'a w przykładowej stronie oczom mym ukazał się taki oto widok:
 
-<img src="../../../../images/ucss.png" alt="unusedcss" />
+<img src="../../../../images/unusedblueprint1.png" alt="unusedcss" />
+<br />
+
+A po wyczyszczeniu CSS'a: 
+<img src="../../../../images/unusedblueprint2.png" alt="unusedcss" />
 
 
 ###Walidacja strony
@@ -83,7 +87,8 @@ CSS także został zwalidowany, nie obylo sie bez paru warningow, ale test zosta
 </p>
 
 ###YSlow  
-W tescie YSlow blog otrzymał note: C. W wiekszości kategorii było dobrze, czyli A. Niespodobało mu się m.in. to, że css nie są spakowane gzipem i nie ma Expires headers. Z tego co wyczytałem to te opcje ustawia sie w apache'u, więc ogólnie nie jest źle ;)
+W tescie YSlow blog otrzymał note: C(77 pkt). W wiekszości kategorii było dobrze, czyli A. Niespodobało mu się m.in. to, że css nie są spakowane gzipem i nie ma Expires headers. Z tego co wyczytałem to te opcje ustawia sie w apache'u, więc ogólnie nie jest źle ;)
+<br />Moja przykładowa strona wypadła lepiej, ponieważ otrzymała note: A(93 pkt) 
 
 ### Linki
   <a href="http://www.blueprintcss.org/">Strona domowa projektu</a><br />
