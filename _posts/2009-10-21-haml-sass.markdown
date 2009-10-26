@@ -5,8 +5,87 @@ title: haml-sass
 
 # {{ page.title }}
 
-Moją przygodę z haml zacząłem od próby zmiany pliku index.html z głównego folderu bloga.
-Użyłem polecnia html2haml, niby wszystko pięknie ale po odpaleniu strony zobaczyłem na głownej stronie
-znaczniki haml'owe. Zabawa z sass'em na blogu skończyła się podobnie. Wygenerowało plik sass, ale po
-podaniu ścieżki, blog nie wyglądał zbyt dobrze. Coś było nie tak. 
+####haml
+Haml jest to język znaczników służących do pisania czytelnego i przejrzystego kodu xhtml'owego. 
+Na sigmie mamy dostęp do narzędzia o nazwie html2haml, dzięki któremu można przekonwertować kod html na hamla.
+Moją przygodę z haml zacząłem zabawy z plikiem index.html z głównego folderu bloga. Tak to wygląda po konwersji:
+{% highlight html %}
+  \---
+layout: index
+title: Drzazga Blog
+\---
+#home.span-20
+  %h1
+    Posty
+  %ul.posts
+    { for post in site.posts }
+    %li
+      %a{ :href => "{ post.url }" }
+        { post.title }'
+      ,
+      %span
+        { post.date | date_to_string }
+    { endfor }
+  %h1
+    Ciekawe linki
+  %ul.links
+    %li
+      %a{ :href => "http://github.com/wbzyl/jblog/" }
+        jBlog
+      \- szablon jekyll-bloga
+    %li
+      %a{ :href => "http://javazpiwnicy.blogspot.com" }
+        Java z piwnicy
+      \- Blog o J2EE autorstwa mojego oraz kolegów
+    %li
+      %a{ :href => "http://guides.rubyonrails.org/" }
+        Rails guides
+    %li
+      %a{ :href => "http://www.apohllo.pl/guides/index.html" }
+        Rails guides po polsku
+
+{% endhighlight %}
+Usunąłem znaki '%' i '{}' przy petli for, aby sie nie wykonywała, a tylko wyświetliła. Jak widać na pierwszy rzut oka kod jest bardzo przejrzysty i przyjemnie sie go czyta. <br /> 
+Jeśli chodzi o wydajność, to według testu na <a href="http://www.ridingtheclutch.com/2009/07/13/the-ultimate-ruby-performance-test-part-1.html">stronie</a> nie jest zbyt różowo. 
+
+####sass
+Sass idzie niemal nieodłącznie w parze z haml'em. Pozwala tworzyć pliki css, tyle że, są one przejrzystrze niż normalne pliki ze stylami. Do prezentacji użyje mojego pliku z przykładowej apliakcji do blueprinta:
+{% highlight text %}
+.container
+  width: 950px
+  margin: 0 auto
+
+.showgrid
+  background: url(src/grid.png)
+
+div
+  &.span-4, &.span-16, &.span-24
+    float: left
+    margin-right: 10px
+
+.last, div.last
+  margin-right: 0
+
+.span-4
+  width: 150px
+
+.span-16
+  width: 630px
+
+.span-24, div.span-24
+  width: 950px
+  margin: 0
+
+.container
+  display: block
+
+  &:after
+    content: "\0020"
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+    overflow: hidden
+{% endhighlight %}
+Kod podobnie jak w przypadku hamla jest zwięzły i łatwo się go czyta.
 
