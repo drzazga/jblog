@@ -4,7 +4,8 @@ title: pierwsze-koty-za-ploty
 ---
 
 # {{ page.title }}
-Po chwilowej zabawie z haml'em i sass'em postanowiłem się wziąć za coś ciekawszego, zacząłem tworzyć aplikację z kolejnego ćwiczenia.
+Po chwilowej zabawie z haml'em i sass'em postanowiłem się wziąć za coś ciekawszego, zacząłem tworzyć aplikację z kolejnego ćwiczenia.<br />
+Kod aplikacji znajduje się na <a href="http://github.com/Drzazga/kontakty">Github'ie</a>
 
 ####Startujemy
 
