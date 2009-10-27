@@ -65,3 +65,32 @@ Tworzy nowy model wedle tego co jest na stronie pluginu:
 Potem dodajemy odpowiedni formularz i ... <br />
 Lipa, u mnie nie trybi, tak więc ogólnie szału nie ma ;)
 
+####Paginacja
+Super mega geolokacja mi nie działa, więc postanowiłem dodać coś innego do aplikacji a mianowicie paginacje do kontaktów na stronie głównej.<br />
+Posłużymy się gemem mislav-will_paginate. Aby go zainstalować wrzucamy do pliku config/environment.rb wpis:
+{% highlight ruby %}
+  Rails::Initializer.run do |config|
+    ...
+    config.gem 'will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
+    ...
+  end
+{% endhighlight %}
+Pózniej rake gems:install i możemy się cieszyć z zainstalowanego gemu :)
+Do kontrolera gdzie pobierałem kontakty dodałem wpis:
+{% highlight ruby %}
+  @contacts = Contact.paginate :per_page => 5, :page => params[:page], :order => 'updated_at DESC'
+{% endhighlight %}
+Powyższy wpis mówi, że będziemy wyświetlać na strone po 5 kontaków posortowanych według daty modyfikacji.<br />
+Pozostaje nam jedynie dodać do pliku index.html.erb wpisu:
+{% highlight erb %}
+  <%= will_paginate @contacts %>
+{% endhighlight %}
+Jeśli zamiast "Next" i "Previous" chcemy mieć polskie nazwy to wpisujemy:
+{% highlight erb %}
+  <%= will_paginate @questions, { 
+    :previous_label => 'Poprzednie', 
+    :next_label => 'Następne' 
+  } %>
+{% endhighlight %}
+I to by było na tyle jeśli chodzi o paginacje :)
+
