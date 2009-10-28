@@ -63,7 +63,35 @@ Tworzy nowy model wedle tego co jest na stronie pluginu:
 ./script/generate model Address street:string locality:string city:string state:string country:string zip:string lat:string lng:string
 {% endhighlight %}
 Potem dodajemy odpowiedni formularz i ... <br />
-Lipa, u mnie nie trybi, tak więc ogólnie szału nie ma ;)
+Lipa, u mnie nie trybi, tak więc ogólnie szału nie ma ;)<br /><br />
+Po krótkich poszukiwaniach znalazłem inny gem: Geokit.
+Instalujemy jako plugin lub gem:
+{% highlight bash %}
+./script/plugin install git://github.com/andre/geokit-rails.git
+{% endhighlight %}
+lub dodajemy 
+{% highlight ruby %}
+Rails::Initializer.run do |config|
+...
+config.gem "geokit"
+...
+end
+{% endhighlight %}
+do pliku environment.rb, a potem:
+{% highlight bash %}
+rake gems:install
+{% endhighlight %}
+Następnie w pliku config/initializers/geokit_config.rb musimy dodać nasz wygenerowany klucz dla Google Maps, pobrać go można z http://www.google.com/apis/maps/signup.html.
+Pozostaje nam dodać gdzieś kod odpowiedzialny za geolokalizacje, więc w jakimś kontrolerze(w zależności gdzie chcecie pózniej wyświetlić dane) piszemy:
+{% highlight ruby %}
+@location = Geokit::Geocoders::MultiGeocoder.geocode(request.remote_ip)
+{% endhighlight %}
+Dzięki temu w widokach będziemy mogli korzystać z tej zmiennej, np:
+{% highlight erb %}
+You are probably from: <%= @location.city %><br />
+ Country: <%= @location.country_code %>
+{% endhighlight %}
+U mnie pokazało, że jestem z Wawy, ale ważne, że działa ;)
 
 ####Paginacja
 Super mega geolokacja mi nie działa, więc postanowiłem dodać coś innego do aplikacji a mianowicie paginacje do kontaktów na stronie głównej.<br />
