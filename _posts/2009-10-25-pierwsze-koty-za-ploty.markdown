@@ -12,7 +12,7 @@ Kod aplikacji znajduje się na <a href="http://github.com/Drzazga/kontakty">Gith
 Zaczynamy standardowo:
 {% highlight bash %}
 rails kontakty
-cd rails
+cd kontakty
 ./script/generate scaffold contact first_name:string surname:string email:string gg:integer homepage:string phone:string city:string street:string post_code:string
 rake db:migrate
 ./script/server
