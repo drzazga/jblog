@@ -122,3 +122,8 @@ Jeśli zamiast "Next" i "Previous" chcemy mieć polskie nazwy to wpisujemy:
 {% endhighlight %}
 I to by było na tyle jeśli chodzi o paginacje :)
 
+####Authlogic + Lockdown
+Dodałem obłsugę autentykacji(Authlogic) oraz autoryzacji(Lockdown).
+Póki co nie mam czasu pisać co i jak zrobić, więc zarzucę jedynie linkami: <br />
+<a href="http://github.com/binarylogic/authlogic_example">Authlogic</a><br />
+<a href="http://stonean.com/">Lockdown</a>
