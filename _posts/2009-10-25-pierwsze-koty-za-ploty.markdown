@@ -127,3 +127,6 @@ Dodałem obłsugę autentykacji(Authlogic) oraz autoryzacji(Lockdown).
 Póki co nie mam czasu pisać co i jak zrobić, więc zarzucę jedynie linkami: <br />
 <a href="http://github.com/binarylogic/authlogic_example">Authlogic</a><br />
 <a href="http://stonean.com/">Lockdown</a>
+
+####Asset Packager
+Po spakowaniu plików js oraz css pluginem, w tescie YSlow otrzymałem notę B(86 pkt). "Make fewer HTTP requests" otrzymało notę A, tak więc plugin spełnił swoje zadanie :)   
