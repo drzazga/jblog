@@ -1,6 +1,6 @@
 ---
 layout: post
-title: fortunki i przyjazny adres
+title: Fortunki i przyjazny adres
 ---
 
 #{{ page.title }}
