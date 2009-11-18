@@ -25,9 +25,14 @@ Przechodząc do sedna sprawy, dodajemy w routes.rb wpis:
 A w quotations_controller.rb:
 {% highlight ruby %}
   unless params[:category].nil?
-    @quotations = Category.find_by_name(params[:category]).quotations
+    unless Category.exists?(params[:category])
+      flash[:notice] = "Podana kategoria nie istnieje"
+    else
+      @quotations = Category.find_by_name(params[:category]).quotations
+    end
   else
     @quotations = Quotation.all
   end
 {% endhighlight %}
+W widoku można pózniej sprawdzić czy @quotations jest nil i nie wyświetlać tableki cytatami. <br />
 Dzięki temu, jeśli przejdziemy pod konkretny adres kategorii, jako parametr dosteniemy nazwe. To umożliwi nam pobranie wszystkich fortunek danej kategorii, w przypadku normalnego wywołania quotations GET, params[:category] jest pusty, więc pobieramy wszystkie fortunki.
