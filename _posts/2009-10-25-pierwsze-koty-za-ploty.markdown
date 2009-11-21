@@ -117,7 +117,7 @@ Jeśli zamiast "Next" i "Previous" chcemy mieć polskie nazwy to wpisujemy:
 {% highlight erb %}
   <%= will_paginate @questions, { 
     :previous_label => 'Poprzednie', 
-    :next_label => 'Następne' 
+   :next_label => 'Następne' 
   } %>
 {% endhighlight %}
 I to by było na tyle jeśli chodzi o paginacje :)
@@ -130,3 +130,6 @@ Póki co nie mam czasu pisać co i jak zrobić, więc zarzucę jedynie linkami: 
 
 ####Asset Packager
 Po spakowaniu plików js oraz css pluginem, w tescie YSlow otrzymałem notę B(86 pkt). "Make fewer HTTP requests" otrzymało notę A, tak więc plugin spełnił swoje zadanie :)   
+
+####Tagi
+Skorzystałem z pluginu acts_as_taggable_on_steroids, aby obsługiwać tagi.
