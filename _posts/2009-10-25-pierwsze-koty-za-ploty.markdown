@@ -9,6 +9,8 @@ Kod aplikacji znajduje się na <a href="http://github.com/Drzazga/kontakty">Gith
 
 ####Startujemy
 
+Dzięki uprzejmości Szymona postawiłem ten prjekt pod adresem: <a href="http://gen2.org:9876/">http://gen2.org:9876/</a>.<br />
+
 Zaczynamy standardowo:
 {% highlight bash %}
 rails kontakty
